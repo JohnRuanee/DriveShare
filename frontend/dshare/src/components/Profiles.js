@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-function Profile() {
+function Profile(username) {
     const [data, setdata] = useState({
         username: "",
         name: "",
@@ -14,7 +14,7 @@ function Profile() {
     });
 
     useEffect(() => {
-        fetch("/data").then((res) =>
+        fetch("/profile/" + username).then((res) =>
         res.json().then((data) =>{
             setdata({
                 username: data.userName,
@@ -30,4 +30,23 @@ function Profile() {
             })
         );
     }, []);
+
+    return (
+        <div className="Profile">
+            <header className="Profile-header">
+                <h1>React and flask</h1>
+                {/* Calling a data from setdata for showing */}
+                <p>{data.username}</p>
+                <p>{data.name}</p>
+                <p>{data.pfp}</p>
+                <p>{data.type}</p>
+                <p>{data.vehicle}</p>
+                <p>{data.location}</p>
+                <p>{data.phonenumber}</p>
+                <p>{data.snapchat}</p>
+                <p>{data.schedule}</p>
+  
+            </header>
+        </div>
+    );
 }

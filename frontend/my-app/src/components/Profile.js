@@ -1,1 +1,0 @@
-const Profile = ({id, picture, userName, car, residency, snap})
