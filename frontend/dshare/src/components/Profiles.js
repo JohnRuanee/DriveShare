@@ -12,7 +12,7 @@ export default function Profile(username) {
         location: "",
         phonenumber: "",
         snapchat: "",
-        schedule: ['0:00am,0:00pm','0:00am,0:00pm','0:00am,0:00pm','0:00am,0:00pm','0:00am,0:00pm'],
+        schedule: ['1:00am,0:00pm','1:00am,0:00pm','1:00am,0:00pm','1:00am,0:00pm','1:00am,0:00pm'],
     });
 
     useEffect(() => {
